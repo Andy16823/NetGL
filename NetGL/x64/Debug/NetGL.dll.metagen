@@ -225,6 +225,9 @@ Class NetGL.OpenGL: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 Always : Public, Static
     Int32 False : Public, Static
     Int32 True : Public, Static
+    Int32 FrontAndBack : Public, Static
+    Int32 Line : Public, Static
+    Int32 Fill : Public, Static
     Int32 ArrayBuffer : Public, Static
     Int32 ElementArrayBuffer : Public, Static
     Int32 StreamDraw : Public, Static
@@ -237,6 +240,8 @@ Class NetGL.OpenGL: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 DynamicRead : Public, Static
     Int32 DynamicCopy : Public, Static
   Methods:
+    VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Double[]): PrivateScope, Public, HideBySig
+    VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Int32[]): PrivateScope, Public, HideBySig
     VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Int16[]): PrivateScope, Public, HideBySig
     VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
     DeleteVertexArrays(Int32, Int32): PrivateScope, Public, HideBySig
@@ -324,6 +329,7 @@ Class NetGL.OpenGL: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     VertexPointer(Int32, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
     VertexPointer(Int32, Int32, Int32, Int32[]): PrivateScope, Public, HideBySig
     VertexPointer(Int32, Int32, Int32, Int16[]): PrivateScope, Public, HideBySig
+    PolygonMode(Int32, Int32): PrivateScope, Public, HideBySig
     DrawElements(Int32, Int32, Int32): PrivateScope, Public, HideBySig
     DrawElements(Int32, Int32, Int32, List`1): PrivateScope, Public, HideBySig
     DrawElements(Int32, Int32, Int32, UInt32[]): PrivateScope, Public, HideBySig
@@ -360,13 +366,12 @@ Class NetGL.OpenGL: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     LookAt(Single, Single, Single, Single, Single, Single, Single, Single, Single): PrivateScope, Public, HideBySig
     Frustum(Single, Single, Single, Single, Single, Single): PrivateScope, Public, HideBySig
     Ortho(Single, Single, Single, Single, Single, Single): PrivateScope, Public, HideBySig
+    Viewport(Single, Single, Single, Single): PrivateScope, Public, HideBySig
     PushMatrix(): PrivateScope, Public, HideBySig
     PopMatrix(): PrivateScope, Public, HideBySig
     GenVertexArrays(Int32): PrivateScope, Public, HideBySig
     BindVertexArray(Int32): PrivateScope, Public, HideBySig
     EnableVertexAttribArray(Int32): PrivateScope, Public, HideBySig
-    VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Double[]): PrivateScope, Public, HideBySig
-    VertexAttribPointer(Int32, Int32, Int32, Int32, Int32, Int32[]): PrivateScope, Public, HideBySig
 Class NetGL.Toolkit.TextureImporter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(System.Drawing.Bitmap): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

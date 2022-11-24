@@ -176,6 +176,10 @@ namespace NetGL {
 		glVertexPointer(Size, ArrayType, Stride, NULL);
 	}
 
+	void NetGL::OpenGL::PolygonMode(int face, int mode) {
+		glPolygonMode(face, mode);
+	}
+
 	void NetGL::OpenGL::EnabledClientState(int mode)
 	{
 		glEnableClientState(mode);
@@ -944,6 +948,11 @@ namespace NetGL {
 	void NetGL::OpenGL::Ortho(float left, float right, float bottom, float top, float znear, float zfar)
 	{
 		glOrtho(left, right, bottom, top, znear, zfar);
+	}
+
+	void NetGL::OpenGL::Viewport(float x, float y, float width, float height) 
+	{
+		glViewport(x, y, width, height);
 	}
 
 	void NetGL::OpenGL::PushMatrix() {

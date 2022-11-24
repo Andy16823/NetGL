@@ -223,6 +223,9 @@ namespace NetGL {
 		static int Always = GL_ALWAYS;
 		static int False = GL_FALSE;
 		static int True = GL_TRUE;
+		static int FrontAndBack = GL_FRONT_AND_BACK;
+		static int Line = GL_LINE;
+		static int Fill = GL_FILL;
 
 		static int ArrayBuffer = GL_ARRAY_BUFFER;
 		static int ElementArrayBuffer = GL_ELEMENT_ARRAY_BUFFER;
@@ -345,6 +348,7 @@ namespace NetGL {
 		void VertexPointer(int Size, int ArrayType, int stride, List<float>^ List);
 		void VertexPointer(int Size, int ArrayType, int stride, int Offset);
 		void VertexPointer(int Size, int ArrayType, int Stride);
+		void PolygonMode(int face, int mode);
 
 		// Drawing
 		void DrawElements(int Mode, int Count, int ElementType, array<byte>^ Array);
@@ -393,6 +397,7 @@ namespace NetGL {
 		void LookAt(float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ);
 		void Frustum(float left, float right, float bottom, float top, float znear, float zfar);
 		void Ortho(float left, float right, float bottom, float top, float znear, float zfar);
+		void Viewport(float x, float y, float width, float height);
 		void PushMatrix();
 		void PopMatrix();
 
